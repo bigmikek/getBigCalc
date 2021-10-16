@@ -29,7 +29,7 @@ def plan():
 
     if plan == 'Bulk' or plan == 'bulk':
         print("Do a 5x5 rep schema focused on the core 4 lifts ")
-       
+        gram()
     elif plan == 'Cut' or plan == 'cut':
         print("Go run fatty ")
         gram()
@@ -73,36 +73,40 @@ def gram():
     return
 def dab():
     num = 0
-    lensize = int(input("How many days a week would you like to train? "))
-    if lensize > 7 or lensize < 1:
-        print("invalid number, please try again")
-        dab()
-    else:
-        sun = input("Would you like to train Sunday? Answer y/n: ")
-        if sun == 'y':
-            num = num + 1
-        mon = input("Would you like to train Monday? Answer y/n: ")
-        if mon == 'y':
-            num = num +1
-        tues = input("Would you like to train Tuesday? Answer y/n: ")
-        if tues == 'y':
-            num = num +1
-        wed = input("Would you like to train Wednesday? Answer y/n: ")
-        if wed == 'y':
-            num = num +1
-        thur = input("Would you like to train Thursday? Answer y/n: ")
-        if thur == 'y':
-            num = num +1
-        fri = input("Would you like to train Friday? Answer y/n: ")
-        if fri == 'y':
-            num = num +1
-        sat = input("Would you like to train Saturday? Answer y/n: ")
-        if sat == 'y':
-            num = num +1
-        if num != lensize:
-            print("You selected an invalid amount of days! ")
+    try:
+        lensize = int(input("How many days a week would you like to train? "))
+        if lensize > 7 or lensize < 1:
+            print("invalid number, please try again")
             dab()
         else:
-            dab()
+            sun = input("Would you like to train Sunday? Answer y/n: ")
+            if sun == 'y':
+                num = num + 1
+            mon = input("Would you like to train Monday? Answer y/n: ")
+            if mon == 'y':
+                num = num +1
+            tues = input("Would you like to train Tuesday? Answer y/n: ")
+            if tues == 'y':
+                num = num +1
+            wed = input("Would you like to train Wednesday? Answer y/n: ")
+            if wed == 'y':
+                num = num +1
+            thur = input("Would you like to train Thursday? Answer y/n: ")
+            if thur == 'y':
+                num = num +1
+            fri = input("Would you like to train Friday? Answer y/n: ")
+            if fri == 'y':
+                num = num +1
+            sat = input("Would you like to train Saturday? Answer y/n: ")
+            if sat == 'y':
+                num = num +1
+            if num != lensize:
+                print("You selected an invalid amount of days! ")
+                dab()
+            else:
+                dab()
+    except:
+        print("invalid response, please try again")
+        dab()
 intro()
 gram()
