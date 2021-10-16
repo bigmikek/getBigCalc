@@ -18,6 +18,7 @@ def orm():
         True_ORM = base * round(ORM/base)
 
         print("Your ORM based on given inputs is ", True_ORM)
+        gram()
     except:
         print("idiot")
         gram()
@@ -31,6 +32,7 @@ def plan():
        
     elif plan == 'Cut' or plan == 'cut':
         print("Go run fatty ")
+        gram()
     elif plan == 'back':
         gram()
         
