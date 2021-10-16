@@ -27,7 +27,7 @@ def orm():
 def plan():
     plan = input("Do you want to Bulk, Cut, or go back? ")
 
-    if plan == 'Bulk' or plan == 'Bulk':
+    if plan == 'Bulk' or plan == 'bulk':
         print("Do a 5x5 rep schema focused on the core 4 lifts ")
        
     elif plan == 'Cut' or plan == 'cut':
