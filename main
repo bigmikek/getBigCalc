@@ -1,0 +1,73 @@
+def intro():
+    name = input("Hello, I am Kriten, your fitness Artificial Intellegince. What is your name? ")
+    print("\nThank you ", name)
+    return
+
+def orm():
+    try:
+        weight = input("Enter weight in pounds: ")
+        weight_t = int(weight)
+        reps = input("Enter the number of successful reps: ")
+        reps_t = int(reps)
+        max_scale_factor = 1/30
+
+        ORM = (reps_t * weight_t * max_scale_factor) + weight_t
+
+        base = 5
+
+        True_ORM = base * round(ORM/base)
+
+        print("Your ORM based on given inputs is ", True_ORM)
+    except:
+        print("idiot")
+        gram()
+    return
+
+def plan():
+    plan = input("Do you want to Bulk, Cut, or go back? ")
+
+    if plan == 'Bulk' or plan == 'Bulk':
+        print("Do a 5x5 rep schema focused on the core 4 lifts ")
+       
+    elif plan == 'Cut' or plan == 'cut':
+        print("Go run fatty ")
+    elif plan == 'back':
+        gram()
+        
+    else:
+        print("invalid response, run the program again ")
+        plan()
+    return
+
+def info():
+        weight = int(input("What is your weight in lbs? "))
+        heightf = int(input("what is your height in feet? "))
+        heighti = int(input("What is your remaining height in inches? "))
+        heightt = (heightf*12)+heighti
+        heightc = heightt * 2.54
+        weightk = weight/2.205
+        bmi = round(10000*(weightk/(heightc*heightc)),1)
+        print("with the given info, your bmi is ", bmi)
+        gram()
+        return
+        
+def gram():
+    fun = input("\nChoose ORM, Plan, or input info \n")
+    if fun == 'ORM' or fun == 'orm':
+        try:
+            orm()
+        except:
+            print("You had one job smh", name)
+            gram()
+    elif fun =='Plan' or fun == 'plan':
+        plan()
+    elif fun == 'info':
+        info()
+    else:
+        print("Invalid Response, try again")
+        gram()
+    return
+
+
+intro()
+gram()
