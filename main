@@ -78,33 +78,70 @@ def dab():
         if lensize > 7 or lensize < 1:
             print("invalid number, please try again")
             dab()
+        elif lensize == 7:
+            print("Bruh too much")
+            gram()
         else:
             sun = input("Would you like to train Sunday? Answer y/n: ")
             if sun == 'y':
                 num = num + 1
+                sunt = 1
+            else:
+                sunt = 0
             mon = input("Would you like to train Monday? Answer y/n: ")
             if mon == 'y':
                 num = num +1
+                mont = 1
+            else:
+                mont = 0
             tues = input("Would you like to train Tuesday? Answer y/n: ")
             if tues == 'y':
                 num = num +1
+                wedt = 1
+            else:
+                tuest = 0
             wed = input("Would you like to train Wednesday? Answer y/n: ")
             if wed == 'y':
                 num = num +1
+                wedt = 1
+            else:
+                wedt = 0
             thur = input("Would you like to train Thursday? Answer y/n: ")
             if thur == 'y':
                 num = num +1
+                thurt = 1
+            else:
+                thurt = 0
             fri = input("Would you like to train Friday? Answer y/n: ")
             if fri == 'y':
                 num = num +1
+                frit = 1
+            else:
+                frit = 0
             sat = input("Would you like to train Saturday? Answer y/n: ")
             if sat == 'y':
                 num = num +1
+                satt = 1
+            else:
+                satt = 0
             if num != lensize:
                 print("You selected an invalid amount of days! ")
                 dab()
             else:
-                dab()
+                if num == 1:
+                    print("I suggest a full body routine for a 1 day a week lifting plan ")
+                elif num == 2:
+                    print("I suggest a full body routine with alternating heavy Squat and Deadlift days for a 2 day a week lifting plan")
+                elif num == 3:
+                    print("I suggest spending a day on bench, squat and deadlift with alternating chest and shoulders every 1st day of the cycle ")
+                elif num == 4:
+                    print("I suggest spending a day concentrating on 1 of the 4 excersises ")
+                elif num == 5:
+                    print ("I suggest spending time ")
+                else:
+                    print("I suggest suffering")
+                days = ['monday','tuesday','wednesday','thursday','friday','saturday']
+                print("the days you want to lift are", days)
     except:
         print("invalid response, please try again")
         dab()
