@@ -1,5 +1,5 @@
 def intro():
-    name = input("Hello, I am Kriten, your fitness Artificial Intellegince. What is your name? ")
+    name = input("\n\n\n\n\n\n\n\n\n\n\n\n\nHello, I am Kriten, your fitness Artificial Intellegince. What is your name? \n\n\n\n\n")
     print("\nThank you ", name)
     return
 
@@ -140,7 +140,7 @@ def dab():
                     print ("I suggest spending time ")
                 else:
                     print("I suggest suffering")
-                days = ['monday','tuesday','wednesday','thursday','friday','saturday']
+                days = ["monday",'tuesday','wednesday','thursday','friday','saturday']
                 print("the days you want to lift are", days)
     except:
         print("invalid response, please try again")
